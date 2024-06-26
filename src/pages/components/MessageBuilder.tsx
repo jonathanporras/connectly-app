@@ -1,9 +1,12 @@
 import styles from "@/styles/MessageBuilder.module.scss";
+import MessageBuilderHeader from "./MessageBuilderHeader";
+import MessageBuilderContent from "./MessageBuilderContent";
 
 export default function MessageBuilder() {
   return (
     <div className={`${styles.messageBuilderWrapper}`}>
-      <h5>Edit Message</h5>
+      <MessageBuilderHeader />
+      <MessageBuilderContent />
     </div>
   );
 }

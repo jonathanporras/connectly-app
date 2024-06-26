@@ -3,12 +3,54 @@
   font-family: "Roboto", sans-serif;
   height: 100%;
   left: 56px;
+  padding: 26px 24px;
   position: absolute;
   top: 0;
   width: 360px;
 
-  h5 {
-    font-size: 24px;
-    font-weight: 400;
+  h6 {
+    font-size: 16px;
+  }
+
+  .messageBuilderHeader {
+    h5 {
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    button {
+      float: right;
+    }
+  }
+}
+
+.messageBuilderContent {
+  margin-top: 32px;
+
+  h6 {
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+}
+
+.messageBuilderContentBox {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 16px 21px;
+
+  svg {
+    vertical-align: text-top;
+  }
+
+  .messageHeaderEditorImageIcon {
+    padding-right:4px;
+  }
+
+  .messageHeaderEditorErrrorIcon {
+    font-size: 16px;
+  }
+
+  .messageHeaderEditorSwitch {
+    float: right;
   }
 }
