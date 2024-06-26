@@ -3,14 +3,14 @@ import Fab from "@mui/material/Fab";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import MessageHeaderEditor from "./MessageHeaderEditor";
+import MessageBodyEditor from "./MessageBodyEditor";
 
 export default function MessageBuilderContent() {
   return (
     <div className={`${styles.messageBuilderContent}`}>
-      <Typography variant="subtitle2" gutterBottom>
-        Content
-      </Typography>
+      <Typography variant="subtitle2">Content</Typography>
       <MessageHeaderEditor />
+      <MessageBodyEditor />
     </div>
   );
 }

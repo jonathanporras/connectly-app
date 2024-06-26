@@ -4,16 +4,14 @@ import ImageIcon from "@mui/icons-material/Image";
 import ErrorIcon from "@mui/icons-material/Error";
 import HighlightIcon from "@mui/icons-material/Highlight";
 import Switch from "@mui/material/Switch";
-import FormHelperText from "@mui/material/FormHelperText";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import TextField from "@mui/material/TextField";
+import Chip from "@mui/material/Chip";
 
 const label = { inputProps: { "aria-label": "Message Header Switch" } };
 
-export default function MessageHeaderEditor() {
+export default function MessageBodyEditor() {
   return (
     <div className={`${styles.messageBuilderContentBox}`}>
       <Typography variant="subtitle2">
@@ -22,43 +20,30 @@ export default function MessageHeaderEditor() {
           color="action"
           fontSize="medium"
         />{" "}
-        Header{" "}
+        Body Message{" "}
         <ErrorIcon
           className={`${styles.messageEditorErrrorIcon}`}
           color="action"
           fontSize="small"
         />
       </Typography>
-      <Switch
-        className={`${styles.messageHeaderEditorSwitch}`}
-        {...label}
-        defaultChecked
-      />
-      <FormControl sx={{ m: 1, minWidth: 80 }}>
-        <Select
-          labelId="demo-simple-select-autowidth-label"
-          id="demo-simple-select-autowidth"
-          value={"Image"}
-          onChange={() => null}
-          autoWidth
-        >
-          <MenuItem value="Image">Image</MenuItem>
-        </Select>
-        <FormHelperText>
-          Image size recommendation: 800 x 418 pixel.
-        </FormHelperText>
-      </FormControl>
-      <Button variant="outlined">Upload Image</Button>
+      <Chip className={`${styles.messageEditorChip}`} label="Required" />
+      <TextField
+        fullWidth
+        multiline
+        maxRows={4}
+        defaultValue="👋 Hi {{1}}, we just kicked off our summer sale! ☀️☀️ Wanna hear more? "
+      ></TextField>
+      <Button variant="text">Add Variable</Button>
       <div className={`${styles.messageEditorTip}`}>
         <Typography variant="body2">
           <HighlightIcon fontSize="small" />
-          Image header tips
+          What are variables?
         </Typography>
         <CloseIcon className={`${styles.messageEditorClose}`} color="action" />
         <Typography variant="caption">
-          Images can enrich the message experience and help maintain engagement.
-          Use eye-catching images that summarize the message (eg discounts,
-          gifts etc.)
+          Variables are dynamic content that help personalize your campaign, for
+          example: customer names or coupon codes.
         </Typography>
       </div>
     </div>

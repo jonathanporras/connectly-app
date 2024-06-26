@@ -3,6 +3,7 @@
   font-family: "Roboto", sans-serif;
   height: 100%;
   left: 56px;
+  overflow: scroll;
   padding: 26px 24px;
   position: absolute;
   top: 0;
@@ -36,17 +37,18 @@
 .messageBuilderContentBox {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+  margin-bottom: 24px;
   padding: 16px 21px;
 
   svg {
     vertical-align: text-top;
   }
 
-  .messageHeaderEditorImageIcon {
+  .messageEditorImageIcon {
     padding-right:4px;
   }
 
-  .messageHeaderEditorErrrorIcon {
+  .messageEditorErrrorIcon {
     font-size: 16px;
   }
 
@@ -55,7 +57,6 @@
   }
 
   div {
-    display: block;
     margin: 0 0;
   }
 
@@ -64,7 +65,11 @@
     margin: 0;
   }
 
-  .messageHeaderEditorTip {
+  .messageEditorChip {
+    float: right;
+  }
+
+  .messageEditorTip {
     background: #F5F5F5;
     border-radius: 6px;
     margin-top: 18px;
@@ -78,7 +83,7 @@
       vertical-align: text-bottom;
     }
 
-    .messageHeaderEditorClose {
+    .messageEditorClose {
       display: block;
       float: right;
     }
