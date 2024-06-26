@@ -1,16 +1,15 @@
 import styles from "@/styles/MessageBuilder.module.scss";
-import Fab from "@mui/material/Fab";
-import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import ImageIcon from "@mui/icons-material/Image";
 import ErrorIcon from "@mui/icons-material/Error";
+import HighlightIcon from "@mui/icons-material/Highlight";
 import Switch from "@mui/material/Switch";
 import FormHelperText from "@mui/material/FormHelperText";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 const label = { inputProps: { "aria-label": "Message Header Switch" } };
 
@@ -50,6 +49,21 @@ export default function MessageHeaderEditor() {
         </FormHelperText>
       </FormControl>
       <Button variant="outlined">Upload Image</Button>
+      <div className={`${styles.messageHeaderEditorTip}`}>
+        <Typography variant="h6">
+          <HighlightIcon fontSize="small" />
+          Image header tips
+        </Typography>
+        <CloseIcon
+          className={`${styles.messageHeaderEditorClose}`}
+          color="action"
+        />
+        <Typography variant="caption">
+          Images can enrich the message experience and help maintain engagement.
+          Use eye-catching images that summarize the message (eg discounts,
+          gifts etc.)
+        </Typography>
+      </div>
     </div>
   );
 }
