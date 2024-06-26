@@ -1,8 +1,14 @@
 .messageBuilderWrapper {
   background-color: #fff;
+  font-family: "Roboto", sans-serif;
   height: 100%;
   left: 56px;
   position: absolute;
   top: 0;
   width: 360px;
+
+  h5 {
+    font-size: 24px;
+    font-weight: 400;
+  }
 }
