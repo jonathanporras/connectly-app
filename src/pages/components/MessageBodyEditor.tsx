@@ -4,8 +4,12 @@ import { Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import MessageBuilderSection from "./MessageBuilderSection";
 import MessageBuilderTooltip from "./MessageBuilderTooltip";
+import { useAtom } from "jotai";
+import { messageBuilderAtom } from "./../../store";
 
 export default function MessageBodyEditor() {
+  const [message, setMessage] = useAtom(messageBuilderAtom);
+
   return (
     <MessageBuilderSection
       icon={
@@ -23,6 +27,13 @@ export default function MessageBodyEditor() {
         multiline
         maxRows={4}
         defaultValue="👋 Hi {{1}}, we just kicked off our summer sale! ☀️☀️ Wanna hear more? "
+        value={message.messageBody ? message.messageBody : null}
+        onChange={(e) => {
+          setMessage({
+            ...message,
+            messageBody: e.target.value,
+          });
+        }}
       ></TextField>
       <Button variant="text">Add Variable</Button>
       <MessageBuilderTooltip
