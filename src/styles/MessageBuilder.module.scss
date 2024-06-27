@@ -25,6 +25,10 @@
   }
 }
 
+.messageBuilderSectionHeader {
+  margin-top: 7px;
+}
+
 .messageBuilderContent {
   margin-top: 32px;
 
@@ -47,6 +51,7 @@
 
   .messageEditorErrrorIcon {
     font-size: 16px;
+    padding-left: 4px;
   }
 
   .messageHeaderEditorSwitch {

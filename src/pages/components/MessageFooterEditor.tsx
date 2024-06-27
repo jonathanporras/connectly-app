@@ -1,39 +1,27 @@
 import styles from "@/styles/MessageBuilder.module.scss";
-import Typography from "@mui/material/Typography";
-import ImageIcon from "@mui/icons-material/Image";
-import ErrorIcon from "@mui/icons-material/Error";
-import Switch from "@mui/material/Switch";
+import TextFieldsIcon from "@mui/icons-material/TextFields";
 import { TextField } from "@mui/material";
-
-const label = { inputProps: { "aria-label": "Message Header Switch" } };
+import MessageBuilderSection from "./MessageBuilderSection";
 
 export default function MessageFooterEditor() {
   return (
-    <div className={`${styles.messageBuilderContentBox}`}>
-      <Typography variant="subtitle2">
-        <ImageIcon
+    <MessageBuilderSection
+      icon={
+        <TextFieldsIcon
           className={`${styles.messageEditorIcon}`}
           color="action"
           fontSize="medium"
-        />{" "}
-        Footer{" "}
-        <ErrorIcon
-          className={`${styles.messageEditorErrrorIcon}`}
-          color="action"
-          fontSize="small"
         />
-      </Typography>
-      <Switch
-        className={`${styles.messageHeaderEditorSwitch}`}
-        {...label}
-        defaultChecked
-      />
+      }
+      isRequired={false}
+      sectionHeader="Footer"
+    >
       <TextField
         fullWidth
         multiline
         maxRows={4}
         defaultValue="👋 Add footer text here."
-      ></TextField>
-    </div>
+      />
+    </MessageBuilderSection>
   );
 }

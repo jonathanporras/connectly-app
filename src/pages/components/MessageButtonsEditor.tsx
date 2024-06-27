@@ -1,35 +1,28 @@
 import styles from "@/styles/MessageBuilder.module.scss";
 import Typography from "@mui/material/Typography";
 import ImageIcon from "@mui/icons-material/Image";
-import ErrorIcon from "@mui/icons-material/Error";
+import Crop169Icon from "@mui/icons-material/Crop169";
 import Switch from "@mui/material/Switch";
 import { TextField } from "@mui/material";
+import MessageBuilderSection from "./MessageBuilderSection";
 
 const label = { inputProps: { "aria-label": "Message Header Switch" } };
 
 export default function MessageButtonsEditor() {
   return (
-    <div className={`${styles.messageBuilderContentBox}`}>
-      <Typography variant="subtitle2">
-        <ImageIcon
+    <MessageBuilderSection
+      icon={
+        <Crop169Icon
           className={`${styles.messageEditorIcon}`}
           color="action"
           fontSize="medium"
-        />{" "}
-        Buttons{" "}
-        <ErrorIcon
-          className={`${styles.messageEditorErrrorIcon}`}
-          color="action"
-          fontSize="small"
         />
-      </Typography>
-      <Switch
-        className={`${styles.messageHeaderEditorSwitch}`}
-        {...label}
-        defaultChecked
-      />
+      }
+      isRequired={false}
+      sectionHeader="Buttons"
+    >
       <Typography variant="body2">Button 1</Typography>
       <TextField fullWidth defaultValue="Enter text"></TextField>
-    </div>
+    </MessageBuilderSection>
   );
 }

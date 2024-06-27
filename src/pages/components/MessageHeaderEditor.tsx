@@ -1,39 +1,28 @@
 import styles from "@/styles/MessageBuilder.module.scss";
 import Typography from "@mui/material/Typography";
 import ImageIcon from "@mui/icons-material/Image";
-import ErrorIcon from "@mui/icons-material/Error";
 import HighlightIcon from "@mui/icons-material/Highlight";
-import Switch from "@mui/material/Switch";
 import FormHelperText from "@mui/material/FormHelperText";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-
-const label = { inputProps: { "aria-label": "Message Header Switch" } };
+import MessageBuilderSection from "./MessageBuilderSection";
 
 export default function MessageHeaderEditor() {
   return (
-    <div className={`${styles.messageBuilderContentBox}`}>
-      <Typography variant="subtitle2">
+    <MessageBuilderSection
+      icon={
         <ImageIcon
           className={`${styles.messageEditorIcon}`}
           color="action"
           fontSize="medium"
-        />{" "}
-        Header{" "}
-        <ErrorIcon
-          className={`${styles.messageEditorErrrorIcon}`}
-          color="action"
-          fontSize="small"
         />
-      </Typography>
-      <Switch
-        className={`${styles.messageHeaderEditorSwitch}`}
-        {...label}
-        defaultChecked
-      />
+      }
+      isRequired={false}
+      sectionHeader="Header"
+    >
       <FormControl sx={{ m: 1, minWidth: 80 }}>
         <Select
           labelId="demo-simple-select-autowidth-label"
@@ -64,6 +53,6 @@ export default function MessageHeaderEditor() {
           gifts etc.)
         </Typography>
       </div>
-    </div>
+    </MessageBuilderSection>
   );
 }
