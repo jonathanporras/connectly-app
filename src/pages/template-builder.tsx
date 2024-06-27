@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import SideBarNav from "./components/SideBarNav";
 import MessageBuilder from "./components/MessageBuilder";
+import Message from "./components/Message";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function TemplateBuilder() {
       <main className={`${styles.main} ${inter.className}`}>
         <SideBarNav />
         <MessageBuilder />
+        <Message />
       </main>
     </>
   );

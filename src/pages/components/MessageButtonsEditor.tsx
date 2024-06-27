@@ -24,8 +24,7 @@ export default function MessageButtonsEditor() {
       <Typography variant="body2">Button 1</Typography>
       <TextField
         fullWidth
-        defaultValue="Enter text"
-        value={message.messageButton ? message.messageButton : null}
+        value={message.messageButton}
         onChange={(e) => {
           setMessage({
             ...message,

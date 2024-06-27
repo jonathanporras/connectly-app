@@ -1,0 +1,17 @@
+.messageWrapper {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  position: absolute;
+  top: 300px;
+  right: 508px;
+  width: 232px;
+
+  p:not(:first-of-type) {
+    border-top: 1px #000 dashed;
+  }
+
+  p:last-child {
+    text-align: center;
+  }
+}
