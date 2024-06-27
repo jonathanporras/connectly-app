@@ -1,9 +1,8 @@
 import styles from "@/styles/MessageBuilder.module.scss";
 import Typography from "@mui/material/Typography";
-import ImageIcon from "@mui/icons-material/Image";
+import TextFieldsIcon from "@mui/icons-material/TextFields";
 import ErrorIcon from "@mui/icons-material/Error";
 import HighlightIcon from "@mui/icons-material/Highlight";
-import Switch from "@mui/material/Switch";
 import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import TextField from "@mui/material/TextField";
@@ -15,8 +14,8 @@ export default function MessageBodyEditor() {
   return (
     <div className={`${styles.messageBuilderContentBox}`}>
       <Typography variant="subtitle2">
-        <ImageIcon
-          className={`${styles.messageEditorImageIcon}`}
+        <TextFieldsIcon
+          className={`${styles.messageEditorIcon}`}
           color="action"
           fontSize="medium"
         />{" "}

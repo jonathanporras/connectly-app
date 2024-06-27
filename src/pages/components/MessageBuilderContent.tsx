@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import MessageHeaderEditor from "./MessageHeaderEditor";
 import MessageBodyEditor from "./MessageBodyEditor";
+import MessageFooterEditor from "./MessageFooterEditor";
 
 export default function MessageBuilderContent() {
   return (
@@ -11,6 +12,7 @@ export default function MessageBuilderContent() {
       <Typography variant="subtitle2">Content</Typography>
       <MessageHeaderEditor />
       <MessageBodyEditor />
+      <MessageFooterEditor />
     </div>
   );
 }

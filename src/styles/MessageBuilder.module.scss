@@ -40,12 +40,9 @@
   margin-bottom: 24px;
   padding: 16px 21px;
 
-  svg {
-    vertical-align: text-top;
-  }
-
-  .messageEditorImageIcon {
+  .messageEditorIcon {
     padding-right:4px;
+    vertical-align: top;
   }
 
   .messageEditorErrrorIcon {
