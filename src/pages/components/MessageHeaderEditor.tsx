@@ -1,14 +1,12 @@
 import styles from "@/styles/MessageBuilder.module.scss";
-import Typography from "@mui/material/Typography";
 import ImageIcon from "@mui/icons-material/Image";
-import HighlightIcon from "@mui/icons-material/Highlight";
 import FormHelperText from "@mui/material/FormHelperText";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Button } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import MessageBuilderSection from "./MessageBuilderSection";
+import MessageBuilderTooltip from "./MessageBuilderTooltip";
 
 export default function MessageHeaderEditor() {
   return (
@@ -41,18 +39,12 @@ export default function MessageHeaderEditor() {
         Upload Image
         <input type="file" hidden />
       </Button>
-      <div className={`${styles.messageEditorTip}`}>
-        <Typography variant="body2">
-          <HighlightIcon fontSize="small" />
-          Image header tips
-        </Typography>
-        <CloseIcon className={`${styles.messageEditorClose}`} color="action" />
-        <Typography variant="caption">
-          Images can enrich the message experience and help maintain engagement.
+      <MessageBuilderTooltip
+        tooltipHeader="Image header tips"
+        tooltipBody="Images can enrich the message experience and help maintain engagement.
           Use eye-catching images that summarize the message (eg discounts,
-          gifts etc.)
-        </Typography>
-      </div>
+          gifts etc.)"
+      />
     </MessageBuilderSection>
   );
 }
