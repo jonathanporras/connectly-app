@@ -1,10 +1,9 @@
 import styles from "@/styles/MessageBuilder.module.scss";
-import Fab from "@mui/material/Fab";
-import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import MessageHeaderEditor from "./MessageHeaderEditor";
 import MessageBodyEditor from "./MessageBodyEditor";
 import MessageFooterEditor from "./MessageFooterEditor";
+import MessageButtonsEditor from "./MessageButtonsEditor";
 
 export default function MessageBuilderContent() {
   return (
@@ -13,6 +12,7 @@ export default function MessageBuilderContent() {
       <MessageHeaderEditor />
       <MessageBodyEditor />
       <MessageFooterEditor />
+      <MessageButtonsEditor />
     </div>
   );
 }

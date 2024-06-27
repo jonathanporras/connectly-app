@@ -7,7 +7,7 @@ import { TextField } from "@mui/material";
 
 const label = { inputProps: { "aria-label": "Message Header Switch" } };
 
-export default function MessageFooterEditor() {
+export default function MessageButtonsEditor() {
   return (
     <div className={`${styles.messageBuilderContentBox}`}>
       <Typography variant="subtitle2">
@@ -16,7 +16,7 @@ export default function MessageFooterEditor() {
           color="action"
           fontSize="medium"
         />{" "}
-        Footer{" "}
+        Buttons{" "}
         <ErrorIcon
           className={`${styles.messageEditorErrrorIcon}`}
           color="action"
@@ -28,12 +28,8 @@ export default function MessageFooterEditor() {
         {...label}
         defaultChecked
       />
-      <TextField
-        fullWidth
-        multiline
-        maxRows={4}
-        defaultValue="👋 Add footer text here."
-      ></TextField>
+      <Typography variant="body2">Button 1</Typography>
+      <TextField fullWidth defaultValue="Enter text"></TextField>
     </div>
   );
 }

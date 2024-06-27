@@ -8,8 +8,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import TextField from "@mui/material/TextField";
 import Chip from "@mui/material/Chip";
 
-const label = { inputProps: { "aria-label": "Message Header Switch" } };
-
 export default function MessageBodyEditor() {
   return (
     <div className={`${styles.messageBuilderContentBox}`}>
