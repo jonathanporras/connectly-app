@@ -4,7 +4,7 @@
   height: 100%;
   left: 56px;
   overflow: scroll;
-  padding: 26px 24px;
+  padding: 26px 24px 120px 24px;
   position: absolute;
   top: 0;
   width: 360px;
@@ -95,5 +95,18 @@
       display: block;
       margin-top: 6px;
     }
+  }
+}
+
+.messageBuilderButtons {
+  background-color: #fff;
+  bottom: 0;
+  left: 56px;
+  padding: 24px;
+  position: fixed;
+  width: 360px;
+
+  button {
+    margin-bottom: 10px;
   }
 }
