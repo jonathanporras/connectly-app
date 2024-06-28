@@ -26,8 +26,7 @@ export default function MessageBodyEditor() {
         fullWidth
         multiline
         maxRows={4}
-        defaultValue="👋 Hi {{1}}, we just kicked off our summer sale! ☀️☀️ Wanna hear more? "
-        value={message.messageBody ? message.messageBody : null}
+        value={message.messageBody}
         onChange={(e) => {
           setMessage({
             ...message,

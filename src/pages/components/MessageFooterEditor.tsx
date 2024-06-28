@@ -24,8 +24,7 @@ export default function MessageFooterEditor() {
         fullWidth
         multiline
         maxRows={4}
-        defaultValue="👋 Add footer text here."
-        value={message.messageFooter ? message.messageFooter : null}
+        value={message.messageFooter}
         onChange={(e) => {
           setMessage({
             ...message,
